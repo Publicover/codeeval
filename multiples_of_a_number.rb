@@ -17,9 +17,12 @@ end
 
 
 
-power_array = Array.new(10, 2)
-def multiply_by_index
-  power_array.each_with_index do |val, index|
-    val = 2 ** index
-  end
-end
+# array_of_2s = Array.new(10, 2)
+#
+# def multiply_by_index(array_of_2s)
+#   array_of_2s.each_index do |x, y|
+#     x ** y
+#   end
+# end
+#
+# good_array = multiply_by_index(array_of_2s)
