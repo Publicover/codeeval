@@ -52,13 +52,53 @@ full_array = full_array.delete_if {|i| i.to_s != (i.to_s).reverse}
 
 
 
+def get_palindrome
+  palindrome_array = []
+  count = 0
+  until count == 1_000 do
+    if count.to_s == (count.to_s).reverse
+      palindrome_array << count
+    end
+    count += 1
+  end
+  palindrome_array
+end
+
+palindrome_array = get_palindrome
+palindrome_array.delete_if {|number| number % 2 == 0}
 
 
 
+# def tall_prime
+#   count_array = []
+#   count = 3
+#   until count_array.length == 5 do
+#     count_array << count
+#     (count_array.length).times do |n|
+#       if count % count_array[n] == 0 && count != count_array[n]
+#         count_array << count
+#         puts "#{count} added to #{count_array}"
+#         puts "#{count_array}"
+#       end
+#       count += 1
+#     end
+#   end
+#   count_array
+# end
 
+full_array = (1..100).to_a
+test_array = (1..25).to_a
+hopefully_primes = []
 
-
-
+(test_array.length).times do |i, n| 
+  if full_array[i] % test_array[n] == 0
+    hopefully_primes << full_array[n]
+    puts "#{full_array[n]} made it in!"
+  else
+    puts "not #{full_array[n]}"
+  end
+  puts "#{hopefully_primes}, maybe????????"
+end
 
 
 
