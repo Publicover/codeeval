@@ -43,10 +43,10 @@ File.open("/Users/jpublicover/Desktop/codeeval/reverse_and_add_nums.txt").each_l
   counter = 0
   test_pal = false
 
-  while num != num.reverse
+  until test_pal == true
     x = rev_and_add(num)
     counter += 1
-    # is_palindrome?(x)
+    test_pal = is_palindrome?(x)
   end
   puts "#{counter} #{num}"
 end
