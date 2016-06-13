@@ -1,6 +1,9 @@
 def find_multiple (number, power_of_2)
+  initial_num = power_of_2
   until power_of_2 >= number
-    power_of_2 += power_of_2
+
+    power_of_2 += initial_num
+    puts "power_of_2 += power_of_2 = #{power_of_2}"
   end
   print "#{power_of_2}\n"
 end
