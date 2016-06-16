@@ -101,22 +101,89 @@
 # end
 
 
+#
+# full_array = (1..1_000).to_a
+# divisor_array = (1..25).to_a
+# hopefully_primes = []
+# full_array.delete_if {|x| x.to_s != (x.to_s).reverse}
+# full_array.delete_if {|x| x % 2 == 0}
+# full_array.delete_if {|x| x % 3 == 0}
+# full_array.delete_if {|x| x % 5 == 0}
+# full_array.delete_if {|x| x % 7 == 0}
+# full_array.delete_if {|x| x % 11 == 0}
+# full_array.delete_if {|i| i % 13 == 0}
+# full_array.delete_if {|i| i % 17 == 0}
+# full_array.delete_if {|i| i % 19 == 0}
+# full_array.delete_if {|i| i % 23 == 0}
+#
+# print full_array.last
 
-full_array = (1..1_000).to_a
-divisor_array = (1..25).to_a
-hopefully_primes = []
-full_array.delete_if {|x| x.to_s != (x.to_s).reverse}
-full_array.delete_if {|x| x % 2 == 0}
-full_array.delete_if {|x| x % 3 == 0}
-full_array.delete_if {|x| x % 5 == 0}
-full_array.delete_if {|x| x % 7 == 0}
-full_array.delete_if {|x| x % 11 == 0}
-full_array.delete_if {|i| i % 13 == 0}
-full_array.delete_if {|i| i % 17 == 0}
-full_array.delete_if {|i| i % 19 == 0}
-full_array.delete_if {|i| i % 23 == 0}
 
-print full_array.last
+bool_hash = Hash[(1..1000).map {|num| [num, true]}]
+bool_hash.delete(1)
+bool_hash.delete_if {|num| num.to_s != (num.to_s).reverse}
+
+bool_ary = (1..1_000).to_a
+bool_ary.delete(1)
+bool_ary.delete_if {|x| x.to_s != (x.to_s).reverse}
+
+bool_ary.delete_if 
+
+
+
+numhash.each do |k, v|
+
+
+  if v == true
+    bool_ary.delete_if {|x| x % k.to_i == 0}
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      i.delete_if {|num| num % k.to_i != 0 }
+      v = false
+
+    end
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
